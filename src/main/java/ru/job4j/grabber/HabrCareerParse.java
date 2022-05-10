@@ -15,7 +15,7 @@ public class HabrCareerParse {
 
     private static final String PAGE_LINK = String.format("%s/vacancies/java_developer?page=P", SOURCE_LINK);
 
-    private static String retrieveDescription(String link) throws IOException {
+    private String retrieveDescription(String link) throws IOException {
         Connection connection = Jsoup.connect(link);
         Document document = connection.get();
         Elements description = document.select(".job_show_description__vacancy_description").select(".style-ugc");
