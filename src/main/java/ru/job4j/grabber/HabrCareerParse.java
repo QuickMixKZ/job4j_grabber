@@ -36,7 +36,7 @@ public class HabrCareerParse implements Parse {
     public List<Post> list(String link) {
         List<Post> result = new ArrayList<>();
         for (int page = 1; page <= 5; page++) {
-            Connection connection = Jsoup.connect(String.format(link, page));
+            Connection connection = Jsoup.connect(String.format(link + "?page=%d", page));
             Document document = null;
             try {
                 document = connection.get();
