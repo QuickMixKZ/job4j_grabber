@@ -1,4 +1,4 @@
-package ru.job4j.grabber;
+package ru.job4j.grabber.interfaces;
 
 import ru.job4j.grabber.models.Post;
 
